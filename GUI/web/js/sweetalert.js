@@ -1,0 +1,1 @@
+var swal2 = () => swal("Oops!","Te faltó llenar algunos campos","Error");
