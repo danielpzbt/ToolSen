@@ -283,13 +283,11 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-98" aria-controls="submenu-98"><i class="fas fa-fw fa-chart-pie"></i>lineas tecnologicas</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-98" aria-controls="submenu-98"><i class="fas fa-fw fa-chart-pie"></i>Lineas tecnologicas</a>
                                 <div id="submenu-98" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "getInsertModal"); ?>">Registrar</a>
-                                        </li>
+                                        
 
                                         <li class="nav-item">
                                             <a class="nav-link" href="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "consult"); ?>">Consultar</a>
@@ -304,9 +302,7 @@
                                 <div id="submenu-99" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo getUrl("NivelDeFormacionDelPrograma", "NivelDeFormacionDelPrograma", "getInsertModal"); ?>">Registrar</a>
-                                        </li>
+                                        
 
                                         <li class="nav-item">
                                             <a class="nav-link" href="<?php echo getUrl("NivelDeFormacionDelPrograma", "NivelDeFormacionDelPrograma", "consult"); ?>">Consultar</a>
