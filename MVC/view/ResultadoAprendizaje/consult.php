@@ -85,7 +85,7 @@ if (isset($_SESSION['mensajeDelete'])) {
 
 <div class="row">
     <div class="col-md-3">
-        <button type="button" id="modal" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-url="<?php echo getUrl("Competencia", "Competencia", "getInsertModal", false, "ajax") ?>">
+        <button type="button" id="modal" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-url="<?php echo getUrl("ResultadoAprendizaje", "ResultadoAprendizaje", "getInsertModal", false, "ajax") ?>">
             Registrar
         </button>
     </div>

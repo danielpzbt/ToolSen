@@ -11,7 +11,7 @@
         <div class="col-md-12">
             <label>Competencia<span class="required">*</span></label>
             <select name="CompCod" class="form-control" required>
-                <option value="">Select...</option>
+                <option value="">Seleccionar...</option>
                 <?php
                 foreach ($competencia as $comp) {
                     echo "<option value='" . $comp['CompCod'] . "'>" . $comp['CompDesc'] . "</option>";
