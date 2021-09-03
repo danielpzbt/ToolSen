@@ -283,8 +283,8 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>lineas tecnologicas</a>
-                                <div id="submenu-3" class="collapse submenu" style="">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-98" aria-controls="submenu-98"><i class="fas fa-fw fa-chart-pie"></i>lineas tecnologicas</a>
+                                <div id="submenu-98" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         
                                         <li class="nav-item">
@@ -300,8 +300,8 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-11" aria-controls="submenu-11"><i class="fas fa-fw fa-chart-pie"></i>Nivel de Programa</a>
-                                <div id="submenu-11" class="collapse submenu" style="">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-99" aria-controls="submenu-99"><i class="fas fa-fw fa-chart-pie"></i>Nivel de Programa</a>
+                                <div id="submenu-99" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         
                                         <li class="nav-item">
