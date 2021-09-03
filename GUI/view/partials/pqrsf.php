@@ -1,4 +1,13 @@
-    <!-- contact section -->
+<?php
+    include_once '../model/MasterModel.php';
+
+    $obj=new MasterModel();
+
+    $sql="SELECT * FROM t_pqrsf_tipo";
+    $tipo_pqrsf=$obj->consult($sql);
+
+?>
+    
     <section class="contact_section ">
         <div class="container">
             <div class="row">
@@ -20,7 +29,7 @@
                             PQRSF
                         </h3>
                         <br>
-                        <form action="<?php echo getUrl("Pqrsf","Pqrsf","postInsert",false,"ajax"); ?>" method="post">
+                        <form action="<?php echo getUrl("Pqrsf", "Pqrsf", "postInsert",false,"ajax"); ?>" method="post">
                             <div class="row">
                                 <div class="col-md-auto">
                                     <div>
@@ -29,8 +38,8 @@
                                 </div>
                                 <div class="col-md-7">
                                     <div>
-                                        <select name="t_pqrsf_tipo" id="">
-                                            <option value="" selected>Selecciona...</option>
+                                        <select name="pqrsf_tipo_cod">
+                                            <option value="" selected>Seleccione...</option>
                                             <?php
                                             foreach ($tipo_pqrsf as $tpt) {
                                                 echo "<option value='".$tpt['pqrsf_tipo_cod']."'>".$tpt['pqrsf_tipo_desc']."</option>";
@@ -41,14 +50,14 @@
                                 </div>
                             </div>
                             <div>
-                                <input type="text" name="pqrsf_nombres" placeholder="Nombres" />
-                                <input type="text" name="pqrsf_apellidos" placeholder="Apellidos" />
+                                <input type="text" name="pqrsf_nombres" placeholder="Nombres" required/>
+                                <input type="text" name="pqrsf_apellidos" placeholder="Apellidos" required/>
                             </div>
                             <div>
-                                <input type="email" name="pqrsf_correo" placeholder="Correo electrónico" />
+                                <input type="email" name="pqrsf_correo" placeholder="Correo electrónico" required/>
                             </div>
                             <div>
-                                <input type="textarea" name="pqrsf_desc" placeholder="Observación" class="input_message" />
+                                <input type="textarea" name="pqrsf_observacion" placeholder="Observación" class="input_message" required/>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <button type="submit" class="btn_on-hover">
@@ -61,4 +70,3 @@
             </div>
         </div>
     </section>
-    <!-- end contact section -->
