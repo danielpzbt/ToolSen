@@ -29,7 +29,7 @@
                             PQRSF
                         </h3>
                         <br>
-                        <form action="<?php echo getUrl("Pqrsf", "Pqrsf", "postInsert"); ?>" method="post">
+                        <form action="<?php echo getUrl("Pqrsf", "Pqrsf", "postInsert",false,"ajax"); ?>" method="post">
                             <div class="row">
                                 <div class="col-md-auto">
                                     <div>
