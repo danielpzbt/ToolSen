@@ -24,14 +24,13 @@ class ForoController{
         $fecha_fin_f=$_POST['fecha_fin_f'];
         $imagen_f=$_FILES['imagen_f']['name'];
         $fecha_f=$_POST['fecha_f'];
-        $estado_f=0;
         $ruta="img/$imagen_f";
 
         move_uploaded_file($_FILES['imagen_f']['tmp_name'],$ruta);
 
         $id=$obj->autoincrement("t_foro","cod_foro");
         
-        $sql="INSERT INTO t_foro VALUES ($id,$t_usuario_usu_id,$t_tema_t_cod_tema,'$titulo_f','$descripcion_f','$fecha_ini_f','$fecha_fin_f','$ruta','$fecha_f',$estado_f)";
+        $sql="INSERT INTO t_foro VALUES ($id,$t_usuario_usu_id,$t_tema_t_cod_tema,'$titulo_f','$descripcion_f','$fecha_ini_f','$fecha_fin_f','$ruta','$fecha_f')";
 
     
         //dd($sql);
@@ -41,8 +40,9 @@ class ForoController{
 
             redirect(getUrl("Foro","Foro","Consult"));
         }else{
-            echo "<br><br><br>";
-            echo "Por favor verifica que los campos no estén en blanco";
+
+    
+            echo "Ops, ha ocurrido un error";
 
             
         }
@@ -52,20 +52,20 @@ class ForoController{
 
         $obj=new ForoModel();
 
-        $sql="SELECT f.cod_foro,f.titulo_f, t.desc_tema, f.fecha_ini_f, f.fecha_fin_f,f.imagen_f, f.estado_f FROM t_foro f, t_tema t WHERE f.t_tema_t_cod_tema=t.t_cod_tema";
+        $sql="SELECT f.cod_foro,f.titulo_f, t.desc_tema, f.fecha_ini_f, f.fecha_fin_f,f.imagen_f FROM t_foro f, t_tema t WHERE f.t_tema_t_cod_tema=t.t_cod_tema";
         $foros=$obj->consult($sql);
 
         include_once '../view/foro/consult.php';
 
     }
 
-    public function index(){
+    public function visit(){
         $obj=new ForoModel();
 
         $sql="SELECT f.cod_foro,f.titulo_f,f.descripcion_f, u.usu_nombres, f.t_usuario_usu_id, t.desc_tema, f.imagen_f FROM t_foro f, t_tema t, t_usuario u WHERE f.t_tema_t_cod_tema=t.t_cod_tema";
         $foros=$obj->consult($sql);
 
-        include_once '../view/foro/index.php';
+        include_once '../view/foro/visit.php';
 
     }
 
@@ -125,7 +125,6 @@ class ForoController{
             $_SESSION['mensajeUpdate']="Se actualizó el foro <b>$titulo_f</b> correctamente";
             redirect(getUrl("Foro", "Foro", "Consult"));
         } else {
-            echo "<br>";
             dd($sql);
             echo "Ops, ha ocurrido un error";
         }
@@ -144,20 +143,6 @@ class ForoController{
         include_once '../view/Foro/modalConsult.php';
     }
 
-    public function getDeleteModal(){
-
-        $obj = new ForoModel();
-
-        $id=$_POST['id'];
-
-        $sql = "SELECT f.cod_foro, f.titulo_f, t.desc_tema FROM t_foro f, t_tema t WHERE f.t_tema_t_cod_tema=t.t_cod_tema AND cod_foro=$id ";
-        $foro = $obj->consult($sql);
-
-
-        include_once '../view/Foro/modalDelete.php';
-
-
-    }
     public function filtro(){
 
         $obj=new DepartamentoModel();
@@ -172,46 +157,36 @@ class ForoController{
     }
 
 
+    public function getDelete(){
 
+        $obj=new DepartamentoModel();
+        $dep_id=$_GET['id_depto'];
+
+        $sql = "SELECT * FROM departamento where id_depto=$dep_id";
+        $departamento=$obj->consult($sql);
+        
+
+        include_once '../view/departamento/delete.php';
+    }
 
     public function postDelete(){
 
-        $obj=new ForoModel();
+        $obj=new DepartamentoModel();
         
-        $cod_foro=$_POST['cod_foro'];
+        $dep_id=$_POST['id_depto'];
 
-        $sql = "DELETE FROM t_foro WHERE cod_foro=$cod_foro";
+        $sql = "DELETE FROM departamento WHERE id_depto=$dep_id";
         $ejecutar=$obj->delete($sql);
 
 
 
         if ($ejecutar){
 
-            redirect(getUrl("Foro","Foro","Consult"));
+            redirect(getUrl("Departamento","Departamento","Consult"));
         }else{
             echo "Ops, ha ocurrido un error";
         }
     
-    }
-
-    public function postDeleteForo(){
-
-        $obj=new ForoModel();
-        
-        $id=$_POST['id'];
-        $estado=$_POST['estado'];
-
-
-        if ($estado==1){
-            $cambio=0;
-        }else{
-            $cambio=1;
-        }
-
-
-        $sql="UPDATE t_foro SET estado_f=$cambio WHERE cod_foro=$id";
-        $ejecutar=$obj->update($sql);
-
     }
 
 

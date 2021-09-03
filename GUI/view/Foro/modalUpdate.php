@@ -9,8 +9,7 @@ foreach ($foros as $for) {
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label>Titulo:</label>
-                    <input type="text" name="titulo_f" class="form-control" required maxlength="31" value="<?php echo $for['titulo_f'] ?>">
-                    <b><p>*máximo 31 caracteres*</p></b>
+                    <input type="text" name="titulo_f" class="form-control" value="<?php echo $for['titulo_f'] ?>">
                     <input type="hidden" name="cod_foro" value="<?php echo $for['cod_foro'] ?>">
                 </div>
 
@@ -40,12 +39,12 @@ foreach ($foros as $for) {
             <div class="row">
                 <div class="col-md-6 form-group">
                 <label>Fecha Inicio: </label>
-                <input type="date" id="fecha" name="fecha_ini_f" class="form-control" min="<?php echo date("Y-m-d") ?>" value="<?php echo $for['fecha_ini_f']?>">
+                <input type="date" id="fecha" name="fecha_ini_f" class="form-control" value="<?php echo $for['fecha_ini_f']?>">
                 </div>
 
                 <div class="col-md-6 form-group">
                 <label>Fecha Fin: </label>
-                <input type="date" id="fecha" name="fecha_fin_f" class="form-control" min="<?php echo date("Y-m-d") ?>" value="<?php echo $for['fecha_fin_f']?>">
+                <input type="date" id="fecha" name="fecha_fin_f" class="form-control" value="<?php echo $for['fecha_fin_f']?>">
                 </div>
                 
             </div>
@@ -54,7 +53,7 @@ foreach ($foros as $for) {
 
                 <div class="col-md-12 form-group">
                     <label>Descripción:</label>
-                    <textarea name="descripcion_f" id="#" cols="127" rows="10" required class="form-control"><?php echo $for['descripcion_f']?></textarea>
+                    <textarea name="descripcion_f" id="#" cols="127" rows="10" class="form-control"><?php echo $for['descripcion_f']?></textarea>
                 </div>
             </div>
 

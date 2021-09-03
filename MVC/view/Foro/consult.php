@@ -1,9 +1,8 @@
-
 <br>
 <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Detalles del Foro</li>
-        </ol>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Detalles del Foro</li>
+    </ol>
 </nav>
 
 <!-- Mensaje Insertar -->
@@ -106,7 +105,7 @@ if (isset($_SESSION['mensajeDelete'])) {
 
             echo "<tr>";
             echo "<td>" . $for['cod_foro'] . "</td>";
-           // echo "<td>" . $for['t_usuario_usu_id'] . "</td>";
+            // echo "<td>" . $for['t_usuario_usu_id'] . "</td>";
             echo "<td>" . $for['titulo_f'] . "</td>";
             echo "<td>" . $for['desc_tema'] . "</td>";
 
@@ -118,14 +117,22 @@ if (isset($_SESSION['mensajeDelete'])) {
             echo "<td>";
             echo "<button  id='editarModal' data-url='" . getUrl("Foro", "Foro", "getConsultModal", false, "ajax") .
                 "' data-id='" . $for['cod_foro'] . "'type='button' class='btn btn-success fas fa-list-alt'></button>";
-            
+
             echo "<button  id='editarModal' data-url='" . getUrl("Foro", "Foro", "getUpdateModal", false, "ajax") .
                 "' data-id='" . $for['cod_foro'] . "'type='button' class='btn btn-primary fas fa-edit ml-2 mr-2'></button>";
 
+            if ($for['estado_f'] == 0) {
+                echo "<button  id='eliminar' data-estado='".$for['estado_f']."' data-valor='Foro' data-url='" . getUrl("Foro", "Foro", "postDeleteForo", false, "ajax") .
+                    "' data-id='" . $for['cod_foro'] .  "' title='Inhabilitar' type='button' class='btn btn-warning fas fa-eye-slash mr-2'></button>";
+            } else {
+                echo "<button  id='eliminar' data-estado='".$for['estado_f']."' data-valor='Foro' data-url='" . getUrl("Foro", "Foro", "postDeleteForo", false, "ajax") .
+                    "' data-id='" . $for['cod_foro'] . "' title='Activar' type='button' class='btn btn-success fas fa-eye mr-2'></button>";
+            }
+
             echo "<button  id='eliminarModal' data-url='" . getUrl("Foro", "Foro", "getDeleteModal", false, "ajax") .
-                "' data-id='" . $for['cod_foro'] . "'type='button' class='btn btn-danger fas fa-times'></button>";
+                "' data-id='" . $for['cod_foro'] . "'type='button' class='btn btn-danger fas fa-trash'></button>";
             echo "</td>";
-                echo "</tr>";
+            echo "</tr>";
         }
 
         ?>

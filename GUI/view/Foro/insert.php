@@ -18,24 +18,21 @@
     </nav>
 
     <div class="row">
-        
-    <input type="hidden" name="cod_foro">
 
         <div class="form-group col-md-7">
         <b><label>Título del Foro:</label></b>
         </div>
 
         <div class="form-group col-md-5">
-            <input type="text" name="titulo_f" class="form-control" placeholder="Título Foro" maxlength="31" required>
-            <b><p>*máximo 31 caracteres*</p></b>
+            <input type="text" name="titulo_f" class="form-control" placeholder="Título Foro">
         </div>
 
 
-        <div class="form-group col-md-7" >
+        <div class="form-group col-md-7">
         <b><label>Seleccione el Tema del Foro:</label></b>
         </div>
-        <div class="form-group col-md-5" >
-            <select class="form-control" name="t_tema_t_cod_tema" id="" required>
+        <div class="form-group col-md-5">
+            <select class="form-control" name="t_tema_t_cod_tema" id="">
                 <option value="">Seleccione...</option>
         <?php
         
@@ -55,7 +52,7 @@
 
 
         <div class="form-group col-md-5">
-            <textarea name="descripcion_f"  id="alertica" cols="127" class="form-control" rows="10" maxlength="1800" required></textarea>
+            <textarea name="descripcion_f" id="#" cols="127" class="form-control" rows="10"></textarea>
 
         </div>
 
@@ -66,7 +63,7 @@
         </div>
 
         <div class="form-group col-md-5">
-            <input type="date" id="fecha" name="fecha_ini_f" class="form-control" required value="<?php echo date("Y-m-d") ?>" min="<?php echo date("Y-m-d") ?>" max="2040-12-31">
+            <input type="date" id="fecha" name="fecha_ini_f" class="form-control" value="<?php echo date("Y-m-d") ?>" min="<?php echo date("Y-m-d") ?>" max="2040-12-31">
         </div>
 
         <div class="form-group col-md-7">
@@ -74,7 +71,7 @@
         </div>
 
         <div class="form-group col-md-5">
-            <input type="date" id="fecha" name="fecha_fin_f" class="form-control" required value="<?php echo "" ?>" min="<?php echo date("Y-m-d") ?>" max="2040-12-31">
+            <input type="date" id="fecha" name="fecha_fin_f" class="form-control" value="<?php echo date("Y-m-d") ?>" min="<?php echo date("Y-m-d") ?>" max="2040-12-31">
 
 
         </div>
@@ -86,20 +83,17 @@
 
         
             <div class="col-md-5">
-                 <input type="file" id="fil" name="imagen_f" class="form-control" required>
-                 <b><p>*extensión jpg únicamente*</p></b>
+                 <input type="file" name="imagen_f" class="form-control">
             </div>
-
 
 
             <div class="form-group col-md-7">
         <b><label>Fecha Hoy:</label></b>
         </div>
-        
 
             <div class="form-group col-md-5">
             <input type="date" id="fecha_f" name="fecha_f" class="form-control" readonly value="<?php echo date("Y-m-d") ?>" min="<?php echo date("Y-m-d") ?>" max="<?php echo date("Y-m-d") ?>">
-        <b><p>*Este campo es automático*</p></b>
+        <p>*Este campo es automático*</p>
         </div>
 
 
