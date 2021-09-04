@@ -60,7 +60,7 @@
             if ($ejecutar) {
                 redirect(getUrl("Competencia", "Competencia", "consult", false, "admin"));
             } else {
-                echo "Oops, seems something went wrong";
+                echo "Ops, ha ocurrido un error";
             }
         }
     }
