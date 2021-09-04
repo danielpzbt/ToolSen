@@ -251,6 +251,24 @@
                                     </ul>
                                 </div>
                             </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-11" aria-controls="submenu-11"><i class="fa fa-fw fa-user-circle"></i>Usuarios</a>
+                                <div id="submenu-11" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?php echo getUrl("Usuario", "Usuario", "consult"); ?>">Consultar</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?php echo getUrl("TipoDocumento", "TipoDocumento", "consult"); ?>">Tipo de Documento</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?php echo getUrl("Rol", "Rol", "consult"); ?>">Roles</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
                             <li class="nav-item ">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Foros</a>
                                 <div id="submenu-4" class="collapse submenu" style="">
