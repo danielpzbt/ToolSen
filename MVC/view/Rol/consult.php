@@ -73,11 +73,6 @@ if (isset($_SESSION['mensajeDelete'])) {
                 echo "<tr style='cursor:no-drop;'>";
                     echo "<td style='opacity:.5;'>" . $roles['cod_rol'] . "</td>";
                     echo "<td style='opacity:.5;'>" . $roles['desc_rol'] . "</td>";
-<<<<<<< HEAD
-=======
-                    echo "<td style='color:#C9C9C9;'>" . $roles['cod_rol'] . "</td>";
-                    echo "<td style='color:#C9C9C9;'>" . $roles['desc_rol'] . "</td>";
->>>>>>> 309c6e34f6eabbffc6ff600f034e0d7b9f5d89a0
                     echo "<td><img src='../web/img/" . $roles['imag_rol'] . "' alt='" . $roles['imag_rol'] . "' style='opacity:.5;' width='100px' ></td>";
                     echo "<td>
                             <button  id='editarModal' type='button' style='opacity:.5;cursor:no-drop;' title='Modificar' class='btn btn-primary fas fa-edit ml-2 mr-2'></button>";
