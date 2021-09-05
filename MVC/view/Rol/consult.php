@@ -69,14 +69,53 @@ if (isset($_SESSION['mensajeDelete'])) {
     <tbody>
         <?php
         foreach ($rol as $roles) {
-            echo "<tr>";
-                echo "<td>" . $roles['cod_rol'] . "</td>";
-                echo "<td>" . $roles['desc_rol'] . "</td>";
-                echo "<td><img src='../web/img/" . $roles['imag_rol'] . "' alt='" . $roles['imag_rol'] . "' width='100px' ></td>";
-                echo "<td>
-                    <button  id='editarModal' data-url='" . getUrl("Rol", "Rol", "getUpdateModal", array("cod_rol"=>$roles['cod_rol']), "ajax") . "' type='button' class='btn btn-primary fas fa-edit ml-2 mr-2'></button>
-                </td>";
-            echo "</tr>";
+            if ($roles['estado_r'] == 1) {
+                echo "<tr style='cursor:no-drop;'>";
+                    echo "<td style='color:#C9C9C9;'>" . $roles['cod_rol'] . "</td>";
+                    echo "<td style='color:#C9C9C9;'>" . $roles['desc_rol'] . "</td>";
+                    echo "<td><img src='../web/img/" . $roles['imag_rol'] . "' alt='" . $roles['imag_rol'] . "' style='opacity:.5;' width='100px' ></td>";
+                    echo "<td>
+                            <button  id='editarModal' type='button' style='opacity:.5;cursor:no-drop;' title='Modificar' class='btn btn-primary fas fa-edit ml-2 mr-2'></button>";
+
+                        if ($roles['cod_rol'] == 1) {
+                            if ($roles['estado_r'] == 0) {
+                                echo "<button  id='eliminar' title='No permitido' style='cursor:no-drop;' type='button' class='btn btn-disable fas fa-eye-slash mr-2'></button>";
+                            }
+                        } else {
+                            if ($roles['estado_r'] == 0) {
+                                echo "<button  id='eliminar' data-estado='" . $roles['estado_r'] . "' data-valor='Rol' data-url='" . getUrl("Rol", "Rol", "changeVisibility", false, "ajax") . "' data-id='" . $roles['cod_rol'] . "' title='Inhabilitar' type='button' class='btn btn-warning fas fa-eye-slash mr-2'></button>";
+                            } else {
+                                echo "<button  id='eliminar' data-estado='" . $roles['estado_r'] . "' data-valor='Rol' data-url='" . getUrl("Rol", "Rol", "changeVisibility", false, "ajax") . "' data-id='" . $roles['cod_rol'] . "' title='Habilitar' type='button' class='btn btn-success fas fa-eye mr-2'></button>";
+                            }
+
+                        }
+
+                    echo "</td>";
+                echo "</tr>";
+            } else {
+                echo "<tr>";
+                    echo "<td>" . $roles['cod_rol'] . "</td>";
+                    echo "<td>" . $roles['desc_rol'] . "</td>";
+                    echo "<td><img src='../web/img/" . $roles['imag_rol'] . "' alt='" . $roles['imag_rol'] . "' width='100px' ></td>";
+                    echo "<td>
+                            <button  id='editarModal' data-url='" . getUrl("Rol", "Rol", "getUpdateModal", array("cod_rol"=>$roles['cod_rol']), "ajax") . "' type='button' title='Modificar' class='btn btn-primary fas fa-edit ml-2 mr-2'></button>";
+
+                        if ($roles['cod_rol'] == 1) {
+                            if ($roles['estado_r'] == 0) {
+                                echo "<button  id='eliminar' title='No permitido' style='cursor:no-drop;' type='button' class='btn btn-disable fas fa-eye-slash mr-2'></button>";
+                            }
+                        } else {
+                            if ($roles['estado_r'] == 0) {
+                                echo "<button  id='eliminar' data-estado='" . $roles['estado_r'] . "' data-valor='Rol' data-url='" . getUrl("Rol", "Rol", "changeVisibility", false, "ajax") . "' data-id='" . $roles['cod_rol'] . "' title='Inhabilitar' type='button' class='btn btn-warning fas fa-eye-slash mr-2'></button>";
+                            } else {
+                                echo "<button  id='eliminar' data-estado='" . $roles['estado_r'] . "' data-valor='Rol' data-url='" . getUrl("Rol", "Rol", "changeVisibility", false, "ajax") . "' data-id='" . $roles['cod_rol'] . "' title='Habilitar' type='button' class='btn btn-success fas fa-eye mr-2'></button>";
+                            }
+
+                        }
+
+                    echo "</td>";
+                echo "</tr>";
+            }
         }
         ?>
     </tbody>
