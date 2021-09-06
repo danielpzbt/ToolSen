@@ -7,7 +7,7 @@
 
                  <div class="col-md-6 form-group">
                         <label>Nivel de Programa</label>
-                        <input type="text" name="nombre_prog" class="form-control" value="<?php echo $nivfor['nombre_prog'] ?>" minlength="9" maxlength="25" required pattern="[a-zA-Z ]+">
+                        <input type="text" name="nombre_prog" class="form-control" value="<?php echo $nivfor['nombre_prog'] ?>" minlength="9" maxlength="25" required pattern="[a-zA-Z \u00E0-\u00FC]+">
                         <input type="hidden" name="id_prog_niv" value="<?php echo $nivfor['id_prog_niv'] ?>" minlength="9" maxlength="25" required>
                 </div>
 
