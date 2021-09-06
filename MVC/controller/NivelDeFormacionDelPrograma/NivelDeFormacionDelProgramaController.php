@@ -69,7 +69,7 @@
             
             $obj=new NivelDeFormacionDelProgramaModel();
             
-            include_once '../view/nivelDeFormacionDelPrograma/insert.php';
+            include_once '../view/nivelDeFormacionDelPrograma/insertModal.php';
         }
 
         

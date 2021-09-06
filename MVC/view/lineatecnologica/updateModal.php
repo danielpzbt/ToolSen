@@ -7,8 +7,8 @@
 
                  <div class="col-md-6 form-group">
                         <label>Linea tecnologica</label>
-                        <input type="text" name="lin_tec_desc" class="form-control" value="<?php echo $lintec['lin_tec_desc'] ?>">
-                        <input type="hidden" name="lin_tec_cod" value="<?php echo $lintec['lin_tec_cod'] ?>">
+                        <input type="text" name="lin_tec_desc" class="form-control" value="<?php echo $lintec['lin_tec_desc'] ?>" minlength="18" maxlength="60" required>
+                        <input type="hidden" name="lin_tec_cod" value="<?php echo $lintec['lin_tec_cod'] ?>" minlength="18" maxlength="60" required>
                 </div>
 
             </div>

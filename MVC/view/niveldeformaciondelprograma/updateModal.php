@@ -7,8 +7,8 @@
 
                  <div class="col-md-6 form-group">
                         <label>Nivel de Programa</label>
-                        <input type="text" name="nombre_prog" class="form-control" value="<?php echo $nivfor['nombre_prog'] ?>">
-                        <input type="hidden" name="id_prog_niv" value="<?php echo $nivfor['id_prog_niv'] ?>">
+                        <input type="text" name="nombre_prog" class="form-control" value="<?php echo $nivfor['nombre_prog'] ?>" minlength="9" maxlength="25" required>
+                        <input type="hidden" name="id_prog_niv" value="<?php echo $nivfor['id_prog_niv'] ?>" minlength="9" maxlength="25" required>
                 </div>
 
             </div>
