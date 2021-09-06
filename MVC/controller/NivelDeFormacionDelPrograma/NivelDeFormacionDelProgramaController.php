@@ -15,6 +15,7 @@
             $obj= new NivelDeFormacionDelProgramaModel();
             
             $nombre_prog=$_POST['nombre_prog'];
+            $nombre_prog=trim($nombre_prog);
 
             $id=$obj->autoincrement("t_programa_nivel","id_prog_niv");
 
@@ -65,7 +66,7 @@
 
             $id_prog_niv=$_POST['id_prog_niv'];
             $nombre_prog=$_POST['nombre_prog'];
-            
+            $nombre_prog=trim($nombre_prog);
             
             $sql="UPDATE t_programa_nivel SET id_prog_niv=$id_prog_niv, nombre_prog='$nombre_prog'
             WHERE id_prog_niv=$id_prog_niv";

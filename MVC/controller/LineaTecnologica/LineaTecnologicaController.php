@@ -11,16 +11,23 @@
             include_once '../view/lineatecnologica/consult.php';
         }
 
+        public function getInsertModala(){
+            
+            $obj=new LineaTecnologicaModel();
+            
+            include_once '../view/lineatecnologica/insert.php';
+        }
+
         public function postInsert(){
             $obj= new LineaTecnologicaModel();
 
             
             $lin_tec_desc=$_POST['lin_tec_desc'];
-            
+            $lin_tec_desc=trim($lin_tec_desc);
             $id=$obj->autoincrement("t_linea_tecnologica","lin_tec_cod");
             $sql="INSERT INTO t_linea_tecnologica VALUES($id,'$lin_tec_desc')";
             //-----------------------------
-
+            
             $conexion=$obj->getConnect();
             $consult="SELECT lin_tec_desc FROM t_linea_tecnologica WHERE lin_tec_desc='$lin_tec_desc' ";
             $verificar= mysqli_query($conexion,$consult);
@@ -51,7 +58,7 @@
             
             $obj=new LineaTecnologicaModel();
             
-            include_once '../view/lineatecnologica/insert.php';
+            include_once '../view/lineatecnologica/insertModal.php';
         }
 
         
@@ -62,6 +69,7 @@
             $lin_tec_cod=$_POST['lin_tec_cod'];
             $lin_tec_desc=$_POST['lin_tec_desc'];
             
+            $lin_tec_desc=trim($lin_tec_desc);
             
             $sql="UPDATE t_linea_tecnologica SET lin_tec_cod=$lin_tec_cod, lin_tec_desc='$lin_tec_desc'
             WHERE lin_tec_cod=$lin_tec_cod";
