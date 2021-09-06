@@ -70,6 +70,21 @@
             $sql="UPDATE t_programa_nivel SET id_prog_niv=$id_prog_niv, nombre_prog='$nombre_prog'
             WHERE id_prog_niv=$id_prog_niv";
 
+            $conexion=$obj->getConnect();
+            $consult="SELECT nombre_prog FROM t_programa_nivel WHERE nombre_prog='$nombre_prog' ";
+            $verificar= mysqli_query($conexion,$consult);
+
+            if(mysqli_num_rows($verificar) > 0 ){
+                echo '
+                    <script>
+                        alert("No puedes darle ese nombre al programa, ya existe.");
+                    </script>
+                ';
+                    redirect(getUrl("NivelDeFormacionDelPrograma","NivelDeFormacionDelPrograma","consult"));
+                    exit();
+    
+                }
+
             $ejecutar=$obj->consult($sql);  
 
             if ($ejecutar) {

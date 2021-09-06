@@ -28,7 +28,7 @@
             if(mysqli_num_rows($verificar) > 0 ){
                 echo '
                     <script>
-                        alert("La Líneas tecnológica que intentas registrar, ya existe. ");
+                        alert("La Línea tecnológica que intentas registrar, ya existe. ");
                     </script>
                 ';
                 redirect(getUrl("LineaTecnologica","LineaTecnologica","consult"));
@@ -65,6 +65,25 @@
             
             $sql="UPDATE t_linea_tecnologica SET lin_tec_cod=$lin_tec_cod, lin_tec_desc='$lin_tec_desc'
             WHERE lin_tec_cod=$lin_tec_cod";
+
+            //-----------------------------
+
+            $conexion=$obj->getConnect();
+            $consult="SELECT lin_tec_desc FROM t_linea_tecnologica WHERE lin_tec_desc='$lin_tec_desc' ";
+            $verificar= mysqli_query($conexion,$consult);
+
+            if(mysqli_num_rows($verificar) > 0 ){
+                echo '
+                    <script>
+                        alert("No puedes darle ese nombre a la Línea tecnológica, ya existe. ");
+                    </script>
+                ';
+                redirect(getUrl("LineaTecnologica","LineaTecnologica","consult"));
+                exit();
+                
+            }
+
+            //-----------------------------
 
             $ejecutar=$obj->consult($sql);  
 
