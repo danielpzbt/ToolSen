@@ -20,7 +20,7 @@
 
             $sql="INSERT INTO t_programa_nivel VALUES($id,'$nombre_prog')";
             
-            
+            // probando commit  
             $ejecutar=$obj->update($sql);
 
             if ($ejecutar) {
