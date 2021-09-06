@@ -11,6 +11,19 @@
             include_once '../view/niveldeformaciondelprograma/consult.php';
         }
 
+        public function getConsultModal(){
+            
+            $obj = new NivelDeFormacionDelProgramaModel();
+
+            $id=$_POST['id'];
+
+            $sql = "SELECT * FROM t_programa_nivel WHERE id_prog_niv=$id";
+            $nivelformacion = $obj->consult($sql);
+
+
+            include_once '../view/niveldeformaciondelprograma/consultModal.php';
+        }
+
         public function postInsert(){
             $obj= new NivelDeFormacionDelProgramaModel();
             
