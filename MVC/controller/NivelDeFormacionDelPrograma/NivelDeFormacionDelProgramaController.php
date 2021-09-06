@@ -20,24 +20,7 @@
 
             $sql="INSERT INTO t_programa_nivel VALUES($id,'$nombre_prog')";
             
-            //-----------------------------
-
-            $conexion=$obj->getConnect();
-            $consult="SELECT nombre_prog FROM t_programa_nivel WHERE nombre_prog='$nombre_prog' ";
-            $verificar= mysqli_query($conexion,$consult);
-
-            if(mysqli_num_rows($verificar) > 0 ){
-                echo '
-                    <script>
-                        alert("El programa que intentas registrar, ya existe.");
-                    </script>
-                ';
-                redirect(getUrl("NivelDeFormacionDelPrograma","NivelDeFormacionDelPrograma","consult"));
-                exit();
-                
-            }
-
-            //-----------------------------
+            
             $ejecutar=$obj->update($sql);
 
             if ($ejecutar) {
