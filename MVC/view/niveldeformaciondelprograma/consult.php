@@ -12,8 +12,7 @@
         <tr>
             <th>ID</th>
             <th>Nivel de Programa</th>
-            <th>Editar</th>
-            <th>Eliminar</th>
+            <th>acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -24,10 +23,12 @@
 
                     echo "<td>".$nivfor['id_prog_niv']."</td>";
                     echo "<td>".$nivfor['nombre_prog']."</td>";
-                    echo "<td><button id='editarModal' data-url='".getUrl("NivelDeFormacionDelPrograma","NivelDeFormacionDelPrograma","getUpdateModal",
-                    false,"ajax")."' data-id='".$nivfor['id_prog_niv']."' type='button' class='btn btn-primary'>Editar</button></td>";
-                    echo "<td><button id='eliminarModal' data-url='".getUrl("NivelDeFormacionDelPrograma","NivelDeFormacionDelPrograma","getDeleteModal",
-                    false,"ajax")."' data-id='".$nivfor['id_prog_niv']."' type='button' class='btn btn-danger'>Eliminar</button></td>";
+                    echo "<td><button id='eliminarModal' data-url='".getUrl("NivelDeFormacionDelPrograma","NivelDeFormacionDelPrograma","getconsult",
+                    false,"ajax")."' data-id='".$nivfor['id_prog_niv']."' type='button' class='btn btn-success fas fa-list-alt mr-2'></button>";
+                    echo "<button id='editarModal' data-url='".getUrl("NivelDeFormacionDelPrograma","NivelDeFormacionDelPrograma","getUpdateModal",
+                    false,"ajax")."' data-id='".$nivfor['id_prog_niv']."' type='button' class='btn btn-primary fas fa-edit mr-2'></button>";
+                    echo "<button id='eliminarModal' data-url='".getUrl("NivelDeFormacionDelPrograma","NivelDeFormacionDelPrograma","getDeleteModal",
+                    false,"ajax")."' data-id='".$nivfor['id_prog_niv']."' type='button' class='btn btn-danger fas fa-trash''></button></td>";
                 echo "</tr>";
             }
         ?>

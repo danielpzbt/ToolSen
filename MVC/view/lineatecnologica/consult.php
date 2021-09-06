@@ -12,8 +12,7 @@
         <tr>
             <th>ID</th>
             <th>Líneas tecnológicas</th>
-            <th>Editar</th>
-            <th>Eliminar</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -24,10 +23,12 @@
 
                     echo "<td>".$linet['lin_tec_cod']."</td>";
                     echo "<td>".$linet['lin_tec_desc']."</td>";
-                    echo "<td><button id='editarModal' data-url='".getUrl("LineaTecnologica","LineaTecnologica","getUpdateModal",
-                    false,"ajax")."' data-id='".$linet['lin_tec_cod']."' type='button' class='btn btn-primary'>Editar</button></td>";
-                    echo "<td><button id='eliminarModal' data-url='".getUrl("LineaTecnologica","LineaTecnologica","getDeleteModal",
-                    false,"ajax")."' data-id='".$linet['lin_tec_cod']."' type='button' class='btn btn-danger'>Eliminar</button></td>";
+                    echo "<td><button id='eliminarModal' data-url='".getUrl("LineaTecnologica","LineaTecnologica","getconsult",
+                    false,"ajax")."' data-id='".$linet['lin_tec_cod']."' type='button' class='btn btn-success fas fa-list-alt mr-2'></button>";
+                    echo "<button id='editarModal' data-url='".getUrl("LineaTecnologica","LineaTecnologica","getUpdateModal",
+                    false,"ajax")."' data-id='".$linet['lin_tec_cod']."' type='button' class='btn btn-primary fas fa-edit mr-2'></button>";
+                    echo "<button id='eliminarModal' data-url='".getUrl("LineaTecnologica","LineaTecnologica","getDeleteModal",
+                    false,"ajax")."' data-id='".$linet['lin_tec_cod']."' type='button' class='btn btn-danger fas fa-trash''></button></td>";
                 echo "</tr>";
             }
         ?>

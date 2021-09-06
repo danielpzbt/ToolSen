@@ -19,7 +19,24 @@
             
             $id=$obj->autoincrement("t_linea_tecnologica","lin_tec_cod");
             $sql="INSERT INTO t_linea_tecnologica VALUES($id,'$lin_tec_desc')";
+            //-----------------------------
 
+            $conexion=$obj->getConnect();
+            $consult="SELECT lin_tec_desc FROM t_linea_tecnologica WHERE lin_tec_desc='$lin_tec_desc' ";
+            $verificar= mysqli_query($conexion,$consult);
+
+            if(mysqli_num_rows($verificar) > 0 ){
+                echo '
+                    <script>
+                        alert("La Líneas tecnológica que intentas registrar, ya existe. ");
+                    </script>
+                ';
+                redirect(getUrl("LineaTecnologica","LineaTecnologica","consult"));
+                exit();
+                
+            }
+
+            //-----------------------------
             $ejecutar=$obj->update($sql);
 
             if ($ejecutar) {
