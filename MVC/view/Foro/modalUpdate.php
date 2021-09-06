@@ -55,6 +55,7 @@ foreach ($foros as $for) {
                 <div class="col-md-12 form-group">
                     <label>Descripción:</label>
                     <textarea name="descripcion_f" id="#" cols="127" rows="10" required class="form-control"><?php echo $for['descripcion_f']?></textarea>
+                    <b><p>Si desea realizar un salto de renglon imprima la etiqueta <ㅤbrㅤ></p></b>
                 </div>
             </div>
 

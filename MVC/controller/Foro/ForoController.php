@@ -25,7 +25,7 @@ class ForoController{
         $imagen_f=$_FILES['imagen_f']['name'];
         $fecha_f=$_POST['fecha_f'];
         $estado_f=0;
-        $ruta="img/$imagen_f";
+        $ruta="../../GUI/web/img/$imagen_f";
 
         move_uploaded_file($_FILES['imagen_f']['tmp_name'],$ruta);
 
@@ -102,7 +102,7 @@ class ForoController{
        
         if (isset($_FILES['imagen_f']['name'])) {
             $imagen_f=$_FILES['imagen_f']['name'];
-            $ruta="img/$imagen_f";
+            $ruta="../../GUI/web/img/$imagen_f";
             move_uploaded_file($_FILES['imagen_f']['tmp_name'],$ruta);
 
             if (isset($_POST['img_vieja'])) {
@@ -158,6 +158,8 @@ class ForoController{
 
 
     }
+
+    
     public function filtro(){
 
         $obj=new DepartamentoModel();

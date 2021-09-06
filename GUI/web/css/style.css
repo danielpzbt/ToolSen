@@ -5,6 +5,7 @@ body {
   background-color: #ffffff;
 }
 
+
 .layout_padding {
   padding: 90px 0;
 }
@@ -961,7 +962,7 @@ a:focus {
 }
 
 /* end footer section*/
-=======
+
 body {
   font-family: "Poppins", sans-serif;
   color: #000000;
@@ -1326,7 +1327,6 @@ a:focus {
 .course_section_foro {
   
   position: relative;
-  border-radius: 2.50rem;
   background-color: #272727;
   color: #fff;
 
@@ -1934,6 +1934,7 @@ a:focus {
 .footer_section a {
   color: #787878;
 }
+
 
 /* end footer section*/
 >>>>>>> 82d734437910b1c6b81cbcb8f53e2e616e9c244b
