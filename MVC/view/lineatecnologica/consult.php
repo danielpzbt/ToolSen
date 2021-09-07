@@ -23,8 +23,7 @@
 
                     echo "<td>".$linet['lin_tec_cod']."</td>";
                     echo "<td>".$linet['lin_tec_desc']."</td>";
-                    
-                    echo "<button id='editarModal' data-url='".getUrl("LineaTecnologica","LineaTecnologica","getUpdateModal",
+                    echo "<td><button id='editarModal' data-url='".getUrl("LineaTecnologica","LineaTecnologica","getUpdateModal",
                     false,"ajax")."' data-id='".$linet['lin_tec_cod']."' type='button' class='btn btn-primary fas fa-edit mr-2'></button>";
                     echo "<button id='eliminarModal' data-url='".getUrl("LineaTecnologica","LineaTecnologica","getDeleteModal",
                     false,"ajax")."' data-id='".$linet['lin_tec_cod']."' type='button' class='btn btn-danger fas fa-trash''></button></td>";

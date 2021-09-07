@@ -23,8 +23,7 @@
 
                     echo "<td>".$nivfor['id_prog_niv']."</td>";
                     echo "<td>".$nivfor['nombre_prog']."</td>";
-                    
-                    echo "<button id='editarModal' data-url='".getUrl("NivelDeFormacionDelPrograma","NivelDeFormacionDelPrograma","getUpdateModal",
+                    echo "<td><button id='editarModal' data-url='".getUrl("NivelDeFormacionDelPrograma","NivelDeFormacionDelPrograma","getUpdateModal",
                     false,"ajax")."' data-id='".$nivfor['id_prog_niv']."' type='button' class='btn btn-primary fas fa-edit mr-2'></button>";
                     echo "<button id='eliminarModal' data-url='".getUrl("NivelDeFormacionDelPrograma","NivelDeFormacionDelPrograma","getDeleteModal",
                     false,"ajax")."' data-id='".$nivfor['id_prog_niv']."' type='button' class='btn btn-danger fas fa-trash''></button></td>";
