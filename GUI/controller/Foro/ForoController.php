@@ -12,41 +12,41 @@ class ForoController{
         
     }
 
-    public function postInsert(){
+    // public function postInsert(){
 
-        $obj= new ForoModel();
+    //     $obj= new ForoModel();
 
-        $t_usuario_usu_id=1;
-        $t_tema_t_cod_tema=$_POST['t_tema_t_cod_tema'];
-        $titulo_f=$_POST['titulo_f'];
-        $descripcion_f=$_POST['descripcion_f'];
-        $fecha_ini_f=$_POST['fecha_ini_f'];
-        $fecha_fin_f=$_POST['fecha_fin_f'];
-        $imagen_f=$_FILES['imagen_f']['name'];
-        $fecha_f=$_POST['fecha_f'];
-        $ruta="img/$imagen_f";
+    //     $t_usuario_usu_id=1;
+    //     $t_tema_t_cod_tema=$_POST['t_tema_t_cod_tema'];
+    //     $titulo_f=$_POST['titulo_f'];
+    //     $descripcion_f=$_POST['descripcion_f'];
+    //     $fecha_ini_f=$_POST['fecha_ini_f'];
+    //     $fecha_fin_f=$_POST['fecha_fin_f'];
+    //     $imagen_f=$_FILES['imagen_f']['name'];
+    //     $fecha_f=$_POST['fecha_f'];
+    //     $ruta="img/$imagen_f";
 
-        move_uploaded_file($_FILES['imagen_f']['tmp_name'],$ruta);
+    //     move_uploaded_file($_FILES['imagen_f']['tmp_name'],$ruta);
 
-        $id=$obj->autoincrement("t_foro","cod_foro");
+    //     $id=$obj->autoincrement("t_foro","cod_foro");
         
-        $sql="INSERT INTO t_foro VALUES ($id,$t_usuario_usu_id,$t_tema_t_cod_tema,'$titulo_f','$descripcion_f','$fecha_ini_f','$fecha_fin_f','$ruta','$fecha_f')";
+    //     $sql="INSERT INTO t_foro VALUES ($id,$t_usuario_usu_id,$t_tema_t_cod_tema,'$titulo_f','$descripcion_f','$fecha_ini_f','$fecha_fin_f','$ruta','$fecha_f')";
 
     
-        //dd($sql);
-        $ejecutar=$obj->insert($sql);
+    //     //dd($sql);
+    //     $ejecutar=$obj->insert($sql);
 
-        if ($ejecutar){
+    //     if ($ejecutar){
 
-            redirect(getUrl("Foro","Foro","Consult"));
-        }else{
+    //         redirect(getUrl("Foro","Foro","Consult"));
+    //     }else{
 
     
-            echo "Ops, ha ocurrido un error";
+    //         echo "Ops, ha ocurrido un error";
 
             
-        }
-    }
+    //     }
+    // }
 
     public function consult(){
 
@@ -62,10 +62,32 @@ class ForoController{
     public function visit(){
         $obj=new ForoModel();
 
-        $sql="SELECT f.cod_foro,f.titulo_f,f.descripcion_f, u.usu_nombres, f.t_usuario_usu_id, t.desc_tema, f.imagen_f FROM t_foro f, t_tema t, t_usuario u WHERE f.t_tema_t_cod_tema=t.t_cod_tema";
+
+     
+
+        $sql="SELECT f.cod_foro,f.titulo_f,f.descripcion_f, u.usu_nombres,
+         f.t_usuario_usu_id, t.desc_tema, f.imagen_f FROM t_foro f, t_tema t, t_usuario u WHERE
+          f.t_tema_t_cod_tema=t.t_cod_tema AND f.estado_f=0 LIMIT 12";
+          
         $foros=$obj->consult($sql);
+        
+
 
         include_once '../view/foro/visit.php';
+
+    }
+
+    public function forums(){
+
+        $obj=new ForoModel();
+
+        $foroID=$_GET['cod_foro'];
+
+        $sql="SELECT f.cod_foro,f.titulo_f,f.descripcion_f, u.usu_nombres,t.desc_tema, f.imagen_f FROM t_foro f, t_tema t, t_usuario u WHERE f.t_tema_t_cod_tema=t.t_cod_tema AND f.cod_foro=$foroID";
+
+        $foros=$obj->consult($sql);
+
+        include_once '../view/foro/forums.php';
 
     }
 
@@ -142,6 +164,7 @@ class ForoController{
 
         include_once '../view/Foro/modalConsult.php';
     }
+    
 
     public function filtro(){
 
@@ -157,42 +180,10 @@ class ForoController{
     }
 
 
-    public function getDelete(){
-
-        $obj=new DepartamentoModel();
-        $dep_id=$_GET['id_depto'];
-
-        $sql = "SELECT * FROM departamento where id_depto=$dep_id";
-        $departamento=$obj->consult($sql);
-        
-
-        include_once '../view/departamento/delete.php';
-    }
-
-    public function postDelete(){
-
-        $obj=new DepartamentoModel();
-        
-        $dep_id=$_POST['id_depto'];
-
-        $sql = "DELETE FROM departamento WHERE id_depto=$dep_id";
-        $ejecutar=$obj->delete($sql);
-
-
-
-        if ($ejecutar){
-
-            redirect(getUrl("Departamento","Departamento","Consult"));
-        }else{
-            echo "Ops, ha ocurrido un error";
-        }
     
     }
 
 
-
-
-}
 
 
 

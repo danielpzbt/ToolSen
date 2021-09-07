@@ -1,4 +1,4 @@
-<section class="course_section_foro layout_padding-bottom">
+<section class="course_section_foro layout_padding-bottom" id="foros">
   <br>
   <br>
 
@@ -35,7 +35,7 @@ foreach ($foros as $for) {
         echo "<h5 class='card-title'>" . $for['titulo_f'] . "</h5>";
         echo "<p class='card-text'>Tema: " . $for['desc_tema'] . "</p>";
         echo "<p> Autor:  ".$for['usu_nombres']." </p>";
-        echo "<a href='" . "#" . '.php' . "' class='btn btn-primary'>Visitar</a>";
+        echo "<a href='" . getUrl("foro","foro","forums", array("cod_foro"=>$for['cod_foro'])). "' class='btn' style='background-color:#FFA64D; color:#000;'>Visitar</a>";
       echo "</div>";
     echo "</div>";
   echo "</div>";
