@@ -37,7 +37,6 @@ if (isset($_GET['modulo'])) {
         include_once '../view/partials/foro.php';
     }
 
-    echo "<br>";
 }
 include_once '../view/partials/footer.php';
 include_once '../view/partials/script.php';
