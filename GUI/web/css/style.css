@@ -745,7 +745,6 @@ a:focus {
 .contact_section {
   background-color: #272727;
   position: relative;
-  margin-bottom: 25px;
 }
 
 .contact_section .heading_container h3::before {
@@ -1719,7 +1718,6 @@ a:focus {
 .contact_section {
   background-color: #272727;
   position: relative;
-  margin-bottom: 25px;
 }
 
 .contact_section .heading_container h3::before {
