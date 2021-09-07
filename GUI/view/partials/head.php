@@ -23,4 +23,6 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
+
+    <style>html{scroll-behavior: smooth;}</style>
 </head>

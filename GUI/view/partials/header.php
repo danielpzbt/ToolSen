@@ -1,5 +1,5 @@
         <!-- header section strats -->
-        <header class="header_section">
+        <header class="header_section" style="background-color:#EB9237;">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
                     <a class="navbar-brand" href="index.php">
@@ -22,7 +22,7 @@
                                 <a class="nav-link" href="#">Nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo getUrl("Foro","Foro","visit")?>">Foros</a>
+                                <a class="nav-link" href="<?php echo getUrl("Foro","Foro","visit")?>#foros">Foros</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo getUrl("Oferta","Oferta","ver")?>">Ofertas</a>
