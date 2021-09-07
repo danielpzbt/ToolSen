@@ -4,7 +4,7 @@
 
         <div class="col-md-12 form-group">
             <label>Nivel de Programa</label>
-            <input type="text" name="nombre_prog" class="form-control" placeholder="nombre de Nivel de Programa" minlength="9" maxlength="25" required pattern="[a-zA-Z \u00E0-\u00FC]+">
+            <input type="text" name="nombre_prog" class="form-control" placeholder="nombre de Nivel de Programa" minlength="7" maxlength="100" required pattern="[a-zA-Z \u00E0-\u00FC]+">
         </div>
         
 
