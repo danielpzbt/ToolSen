@@ -57,7 +57,7 @@
                                 <input type="email" name="pqrsf_correo" placeholder="Correo electrónico" required/>
                             </div>
                             <div>
-                                <input type="textarea" name="pqrsf_observacion" placeholder="Observación" class="input_message" required/>
+                                <textarea class="form-control mt-2" style="border-radius: 20px;padding:15px;" cols="67" rows="6" id="texto" name="pqrsf_observacion" placeholder="Observación" required></textarea>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <button type="submit" class="btn_on-hover">
