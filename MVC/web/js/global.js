@@ -114,6 +114,24 @@ $(document).ready(function(){
             }
         });
     });
+    $(document).on("click","#consultlpModal",function(){
+
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-id");
+
+        $.ajax({
+
+            url:url,
+            data:"id="+id,
+            type:"POST",
+            success:function(datos){
+
+                $("#contenedor").html(datos);
+                $("#exampleModal").modal("show");
+
+            }
+        });
+    });
 
     //Inhabilitar
 
