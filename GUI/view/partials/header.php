@@ -22,7 +22,7 @@
                                 <a class="nav-link" href="#">Nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo getUrl("Foro","Foro","visit")?>">Foros</a>
+                                <a class="nav-link" href="<?php echo getUrl("Foro","Foro","visit")?>#foros">Foros</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo getUrl("Oferta","Oferta","ver")?>">Ofertas</a>
