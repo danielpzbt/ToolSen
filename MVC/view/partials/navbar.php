@@ -214,7 +214,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo getUrl("NivelDeFormacionDelPrograma", "NivelDeFormacionDelPrograma", "consult"); ?>">Nivel de Formacion del Programa</a>
+                                            <a class="nav-link" href="<?php echo getUrl("NivelDeFormacionDelPrograma", "NivelDeFormacionDelPrograma", "consult"); ?>">Nivel de Formacion</a>
                                         </li>
 
                                     </ul>
