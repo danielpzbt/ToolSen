@@ -59,8 +59,6 @@
         
         
 
-
-
         public function getUpdateModal(){
 
             $obj=new OfertaModel();
