@@ -1,6 +1,6 @@
 <div >
     <center>
-        <h3 class="display-4">Crear oferta</h3>
+        <h3 class="display-4">Registar una oferta</h3>
     </center>
     <center>
         
@@ -18,6 +18,6 @@
         </nav>
     </center>
 
- 
+    
 
 </form>

@@ -221,9 +221,6 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="<?php echo getUrl("oferta", "oferta", "consult"); ?>">Consultar</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo getUrl("oferta", "oferta", "index"); ?>">Ver</a>
-                                        </li>
                                     </ul>
                                 </div>
                             </li>
