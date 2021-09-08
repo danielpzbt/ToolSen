@@ -4,7 +4,7 @@
 
     class ProgramaModel extends MasterModel{
         
-    }
+    } 
 
 
 ?>
