@@ -11,18 +11,7 @@
             include_once '../view/lineatecnologica/consult.php';
         }
 
-        public function getConsultModal(){
-            
-            $obj = new LineaTecnologicaModel();
-
-            $id=$_POST['id'];
-
-            $sql = "SELECT * FROM t_linea_tecnologica WHERE lin_tec_cod=$id";
-            $lineatecnologica = $obj->consult($sql);
-
-
-            include_once '../view/lineatecnologica/consultModal.php';
-        }
+        
 
         public function postInsert(){
             $obj= new LineaTecnologicaModel();
