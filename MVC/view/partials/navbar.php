@@ -199,15 +199,24 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>Programas </a>
-                                <div id="submenu-2" class="collapse submenu" style="">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>Programas</a>
+                                <div id="submenu-2" class="collapse submenu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/general.html">#</a>
+                                            <a class="nav-link" href="<?php echo getUrl("Competencia", "Competencia", "consult") ?>">Competencias</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/carousel.html">#</a>
+                                            <a class="nav-link" href="<?php echo getUrl("ResultadoAprendizaje", "ResultadoAprendizaje", "consult") ?>">Resultados de Aprendizaje</a>
                                         </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "consult"); ?>">Linea Tecnologica</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?php echo getUrl("NivelDeFormacionDelPrograma", "NivelDeFormacionDelPrograma", "consult"); ?>">Nivel de Formacion</a>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </li>
@@ -274,34 +283,43 @@
                                 </div>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-100" aria-controls="submenu-100"><i class="fas fa-fw fa-inbox"></i>Noticias</a>
+                                <div id="submenu-100" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?php echo getUrl("Noticia", "Noticia", "consult"); ?>">Consultar</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?php echo getUrl("TipoNoticia", "TipoNoticia", "getInsert"); ?>">Tipo Noticia</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-98" aria-controls="submenu-98"><i class="fas fa-fw fa-chart-pie"></i>Lineas tecnologicas</a>
                                 <div id="submenu-98" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         
                                         
 
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "consult"); ?>">Consultar</a>
-                                        </li>
+                                        
 
                                     </ul>
                                 </div>
-                            </li>
+                            </li> -->
 
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-99" aria-controls="submenu-99"><i class="fas fa-fw fa-chart-pie"></i>Nivel de Programa</a>
                                 <div id="submenu-99" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         
                                         
 
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo getUrl("NivelDeFormacionDelPrograma", "NivelDeFormacionDelPrograma", "consult"); ?>">Consultar</a>
-                                        </li>
+                                        
 
                                     </ul>
                                 </div>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i>PQRSF</a>
                                 <div id="submenu-6" class="collapse submenu" style="">
