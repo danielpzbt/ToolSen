@@ -115,41 +115,7 @@ $(document).ready(function(){
         });
     });
 
-    //Inhabilitar
 
-    $(document).on("click","#modalInhabilitar",function(){
-        var url=$(this).attr("data-url");
-
-
-        $.ajax({
-            url:url,
-            success:function(datos){
-            $("#contenedor").html(datos);
-            $("#exampleModalInhabilitar").modal("show");
-
-            }
-        });
-    });
-
-
-    $(document).on("click","#inhabilitarModal",function(){
-
-        var url=$(this).attr("data-url");
-        var id=$(this).attr("data-id");
-
-        $.ajax({
-
-            url:url,
-            data:"id="+id,
-            type:"POST",
-            success:function(datos){
-
-                $("#contenedor").html(datos);
-                $("#exampleModal").modal("show");
-
-            }
-        });
-    });
     
 
     $(document).on("change","#id_depto",function(){

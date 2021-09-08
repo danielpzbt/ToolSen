@@ -15,7 +15,7 @@
                                 <a class="nav-link" href="#">Nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Foros</a>
+                                <a class="nav-link" href="<?php echo getUrl("Foro","Foro","visit");?>">Foros</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Ofertas</a>
@@ -57,7 +57,7 @@
                             </a>
                         </div>
                         <form action="">
-                            <input type="text" placeholder="Tu correo electrónico"/>
+                            <input type="text" placeholder="Tu correo electrónico" />
                             <button>
                                 Suscribirse
                             </button>
@@ -76,3 +76,8 @@
     </footer>
 
     <!-- footer section -->
+
+    <!-- include archivos js -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/global.js"></script>

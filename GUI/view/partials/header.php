@@ -1,5 +1,5 @@
         <!-- header section strats -->
-        <header class="header_section">
+        <header class="header_section" style="background-color:#EB9237">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
                     <a class="navbar-brand" href="index.php">

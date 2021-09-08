@@ -11,7 +11,7 @@
   <p>
      Conoce todos los Foros que tenemos disponibles en nuestro Sistema Web,
     <br>
-    que pueden ser de tu interés.
+    pueden ser de tu interés :).
   </p>
 </div>
 

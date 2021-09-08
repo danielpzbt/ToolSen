@@ -31,7 +31,9 @@ class ForoController{
 
         $id=$obj->autoincrement("t_foro","cod_foro");
         
-        $sql="INSERT INTO t_foro VALUES ($id,$t_usuario_usu_id,$t_tema_t_cod_tema,'$titulo_f','$descripcion_f','$fecha_ini_f','$fecha_fin_f','$ruta','$fecha_f',$estado_f)";
+        $sql="INSERT INTO t_foro VALUES ($id,$t_usuario_usu_id,$t_tema_t_cod_tema,
+        '$titulo_f','$descripcion_f','$fecha_ini_f','$fecha_fin_f','$ruta',
+        '$fecha_f',$estado_f)";
 
     
         //dd($sql);

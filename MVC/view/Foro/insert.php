@@ -56,7 +56,7 @@
 
         <div class="form-group col-md-5">
             <textarea name="descripcion_f"  id="alertica" cols="127" class="form-control" rows="10" maxlength="1800" required></textarea>
-
+            <b><p>*Si desea realizar un salto de renglón imprima la etiqueta* <ㅤbrㅤ></p></b>
         </div>
 
 

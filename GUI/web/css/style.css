@@ -1,9 +1,36 @@
-<<<<<<< HEAD
+
 body {
   font-family: "Poppins", sans-serif;
   color: #000000;
   background-color: #ffffff;
 }
+
+.span-button{
+  cursor: pointer;
+  color: #202020;
+  background-color: #EB9237;
+  border: 1px #fff;
+  padding: 3px 8px;
+  float: right;
+  border-radius: 15px;
+  
+}
+.span-button:hover{
+  background-color: #e2e2e2;
+}
+
+.formforo{
+
+  display: none;
+  background-color: rgb(235, 235, 235);
+  border-radius: 8px;
+  padding: 35px;
+
+}
+.formforo.active{
+  display: block;
+}
+
 
 
 .layout_padding {
@@ -1937,5 +1964,4 @@ a:focus {
 
 
 /* end footer section*/
->>>>>>> 82d734437910b1c6b81cbcb8f53e2e616e9c244b
 /*# sourceMappingURL=style.css.map */

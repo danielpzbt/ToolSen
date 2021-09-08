@@ -34,7 +34,6 @@ if (isset($_GET['modulo'])) {
         resolve();
     } else {
         include_once '../view/partials/pqrsf.php';
-        include_once '../view/partials/foro.php';
     }
 
     echo "<br>";
