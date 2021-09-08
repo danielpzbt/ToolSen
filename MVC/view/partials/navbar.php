@@ -262,6 +262,11 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="<?php echo getUrl("foro", "foro", "consult"); ?>">Consultar</a>
                                         </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?php echo getUrl("foro", "foro", "comments"); ?>">Comentarios</a>
+                                        </li>
+
                                         <li class="nav-item">
                                             <a class="nav-link" href="<?php echo getUrl("foro", "foro", "index"); ?>">Visitar</a>
                                         </li>

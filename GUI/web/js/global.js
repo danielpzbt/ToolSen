@@ -29,4 +29,19 @@ $(document).ready(function(){
         });
     });
 
+
+    $(document).on("click","#mostrar",function(){
+
+       
+        let mostrar = document.querySelector("#mostrar");
+        let formforo = document.querySelector(".formforo");
+
+        mostrar.onclick = function() {
+            formforo.classList.toggle("active");
+        }
+      
+    });
+
+
+
 });

@@ -133,8 +133,10 @@ $(document).ready(function () {
         });
     });
 
-    //Inhabilitar
 
+<<<<<<< HEAD
+    
+=======
     $(document).on("click", "#modalInhabilitar", function () {
         var url = $(this).attr("data-url");
 
@@ -168,6 +170,7 @@ $(document).ready(function () {
             }
         });
     });
+>>>>>>> 728ec415576427a73306b26fce633e928ccdcce7
 
 
     $(document).on("change", "#id_depto", function () {
