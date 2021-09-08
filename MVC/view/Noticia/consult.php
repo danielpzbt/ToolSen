@@ -81,7 +81,10 @@ if (isset($_SESSION['mensajeDelete'])) {
                     echo "<td style='opacity:.3;'>" . $noti['fech_noti'] . "</td>";
                     echo "<td><img src='../web/img/" . $noti['imag_noti'] . "' alt='" . $noti['imag_noti'] . "' style='opacity:.3;' width='100px' ></td>";
                     echo "<td>
-                            <button  id='editarModal' type='button' style='opacity:.3;cursor:no-drop;' title='Modificar' class='btn btn-primary fas fa-edit ml-2 mr-2'></button>";
+
+                        <button id='modal' data-toggle='modal' style='opacity:.3;cursor:no-drop;' data-target='#exampleModal' type='button' class='btn btn-success fas fa-list-alt'></button>
+
+                        <button  id='editarModal' type='button' style='opacity:.3;cursor:no-drop;' title='Modificar' class='btn btn-primary fas fa-edit ml-2 mr-2'></button>";
 
                         if ($noti['id_estado'] == 0) {
                             echo "<button  id='eliminar' data-estado='" . $noti['id_estado'] . "' data-valor='Noticia' data-url='" . getUrl("Noticia", "Noticia", "changeVisibility", false, "ajax") . "' data-id='" . $noti['cod_noti'] . "' title='Inhabilitar' type='button' class='btn btn-warning fas fa-eye-slash mr-2'></button>";

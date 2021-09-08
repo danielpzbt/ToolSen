@@ -97,13 +97,13 @@
         {
             $obj=new NoticiaModel();
 
-            $Cod_Rol=$_GET['cod_rol'];
+            $Cod_Noti=$_GET['cod_noti'];
 
-            $sql = "DELETE FROM t_rol WHERE cod_rol=$Cod_Rol";
+            $sql = "DELETE FROM t_noticia WHERE cod_noti = $Cod_Noti";
             $ejecutar=$obj->delete($sql);
 
             if ($ejecutar){
-                redirect(getUrl("Rol","Rol","Consult"));
+                redirect(getUrl("Noticia","Noticia","Consult"));
             }else{
                 echo "Ops, ha ocurrido un error";
             }
