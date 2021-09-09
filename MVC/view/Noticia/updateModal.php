@@ -1,4 +1,4 @@
-<form action="<?php echo getURL("Noticia", "Noticia", "postUpdate", false, "ajax") ?>" method="post">
+<form action="<?php echo getURL("Noticia", "Noticia", "postUpdate", false, "ajax") ?>" method="post" enctype="multipart/form-data">
     <defs>
         <style>.info{font-size: 13px;color:#707070;float:right}.required{color:red;}.limit{color:grey;}</style>
     </defs>
@@ -44,8 +44,7 @@
             <div class="col-md-12">
                 <label>Imagen:</label>
                 <div id="cambiarImagen">
-                    <img class="d-block" id="imagen" src="../web/img/<?php echo $noti['imag_noti'] ?>" width="150px">
-                    <input type='hidden' class='form-control' name='imagen_f' value="<?php echo $noti['imag_noti'] ?>">
+                    <img class="d-block" id="imagen" src="<?php echo $noti['imag_noti'] ?>" width="150px">
                     <button type="button" id="cambioImagen" class="btn btn-primary mt-3">Cambiar Imagen</button>
                 </div>
             </div>

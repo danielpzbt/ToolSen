@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(document).on("click", "#cambioImagen", function () {
 
         var ruta = $("#imagen").attr("src");
-        $("#cambiarImagen").html("<input type='file' id='fil' name='imagen_f'>");
+        $("#cambiarImagen").html("<input type='file' id='fil' name='imag_noti'>");
         $("#cambiarImagen").append("<input type='hidden' name='img_vieja' value='" + ruta + "'>");
     });
 
@@ -134,9 +134,6 @@ $(document).ready(function () {
     });
 
 
-<<<<<<< HEAD
-    
-=======
     $(document).on("click", "#modalInhabilitar", function () {
         var url = $(this).attr("data-url");
 
@@ -170,7 +167,6 @@ $(document).ready(function () {
             }
         });
     });
->>>>>>> 728ec415576427a73306b26fce633e928ccdcce7
 
 
     $(document).on("change", "#id_depto", function () {

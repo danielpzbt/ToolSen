@@ -1,4 +1,4 @@
-<form action="<?php echo getURL("Noticia", "Noticia", "postInsert", false, "ajax") ?>" method="post">
+<form action="<?php echo getURL("Noticia", "Noticia", "postInsert", false, "ajax") ?>" method="post" enctype="multipart/form-data">
     <defs>
         <style>.info{font-size: 13px;color:#707070;float:right}.required{color:red;}.limit{color:grey;}</style>
     </defs>

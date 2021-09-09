@@ -101,7 +101,7 @@ if (isset($_SESSION['mensajeDelete'])) {
                     echo "<td>" . $noti['desc_tipo_not'] . "</td>";
                     echo "<td>" . $noti['tit_noti'] . "</td>";
                     echo "<td>" . $noti['fech_noti'] . "</td>";
-                    echo "<td><img src='../web/img/" . $noti['imag_noti'] . "' alt='" . $noti['imag_noti'] . "' width='100px' ></td>";
+                    echo "<td><img src='" . $noti['imag_noti'] . "' alt='" . $noti['imag_noti'] . "' width='100px' ></td>";
                     echo "<td>
 
                         <button id='modal' data-toggle='modal' data-target='#exampleModal' data-url='" . getUrl("Noticia", "Noticia", "consultModal", array("cod_noti"=>$noti['cod_noti']), "ajax") . "' type='button' class='btn btn-success fas fa-list-alt'></button>
