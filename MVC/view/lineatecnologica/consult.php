@@ -1,12 +1,9 @@
-<div class="row mt-4">
-    <div class="col-md-3">
-        <button style="margin-bottom: 10px" type="button" id="modal" class="btn btn-success" data-toggle="modal"
-        data-target="#exampleModal" data-url="<?php echo getUrl("LineaTecnologica","LineaTecnologica",
-        "getInsertModal",false,"ajax") ?>">
-            Registrar
-        </button>
-    </div>   
-</div>
+<br>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Línea tecnológica</li>
+    </ol>
+</nav>
 <table class="table table-hover table-striped mt-3 table-light" id="tabla">
     <thead class="thead-dark" >
         <tr>
@@ -32,3 +29,12 @@
         ?>
     </tbody>
 </table>
+<div class="row mt-4">
+    <div class="col-md-3">
+        <button style="margin-bottom: 10px" type="button" id="modal" class="btn btn-success" data-toggle="modal"
+        data-target="#exampleModal" data-url="<?php echo getUrl("LineaTecnologica","LineaTecnologica",
+        "getInsertModal",false,"ajax") ?>">
+            Registrar
+        </button>
+    </div>   
+</div>
