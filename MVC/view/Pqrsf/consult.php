@@ -26,11 +26,11 @@
             echo "<td>" . $pqrsf['pqrsf_tipo_desc'] . "</td>";
             echo "<td>" . $pqrsf['usu_id'] . "</td>";
             echo "<td>" . $pqrsf['desc_estado'] . "</td>";
-            echo "<td>" . $pqrsf['pqrsf_fech'] . "</td>";  
+            echo "<td>" . $pqrsf['pqrsf_fech'] . "</td>";
             echo "<td>";
-                echo "<button  id='detailModalPqrsf' data-url='" . getUrl("Pqrsf", "Pqrsf", "getDetail", false, "ajax") .
+            echo "<button  id='detailModalPqrsf' data-url='" . getUrl("Pqrsf", "Pqrsf", "getDetail", false, "ajax") .
                 "' data-id='" . $pqrsf['cod_pqrsf'] . "'type='button' class='btn btn-success fas fa-list-alt'></button>";
-                echo "<button id='responderModal' data-url='" . getUrl("Pqrsf", "Pqrsf", "getAnswer", false, "ajax") . "' data-id='" . $pqrsf['cod_pqrsf'] . "' type='button' class='btn btn-primary fas fa-edit ml-2 mr-2'></button> ";
+            echo "<button id='responderModal' data-url='" . getUrl("Pqrsf", "Pqrsf", "getAnswer", false, "ajax") . "' data-id='" . $pqrsf['cod_pqrsf'] . "' type='button' class='btn btn-primary fas fa-edit ml-2 mr-2'></button> ";
             echo "</td>";
             echo "</tr>";
         }
